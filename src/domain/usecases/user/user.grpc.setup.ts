@@ -1,5 +1,5 @@
 import { ClientProviderOptions, Transport } from '@nestjs/microservices';
-import { app } from '@factory/protobuf';
+import { app } from '@clv-factory/protobuf';
 
 export const ModelProtoFiles = ['app/payment/base/user/v1/user.proto'];
 
@@ -18,7 +18,7 @@ export const generalConfig = (
       package: ['app.payment.user.service.v1'],
       protoPath: [...ModelProtoFiles, ...protoPathFiles],
       loader: {
-        includeDirs: ['./node_modules/@factory/protobuf'],
+        includeDirs: ['./node_modules/@clv-factory/protobuf/dist'],
         defaults: true,
       },
     },

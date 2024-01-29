@@ -1,13 +1,13 @@
 import { Inject, Injectable } from '@nestjs/common';
+import { ClientGrpc } from '@nestjs/microservices';
+import { lastValueFrom } from 'rxjs';
+import { IUserUseCase } from './domain.usecase.user.interface';
 import {
   CreateUserRequest,
   GetUsersRequest,
   USER_SERVICE_NAME,
   UserServiceClient,
-} from '@factory/protobuf/gRPC/generate/index.app.payment.user.service.v1';
-import { ClientGrpc } from '@nestjs/microservices';
-import { lastValueFrom } from 'rxjs';
-import { IUserUseCase } from './domain.usecase.user.interface';
+} from '@clv-factory/protobuf/dist/gRPC/generate/index.app.payment.user.service.v1';
 
 @Injectable()
 export class UserUsecaseService implements IUserUseCase {

@@ -1,4 +1,4 @@
-import { app } from '@factory/protobuf';
+import { app } from '@clv-factory/protobuf';
 
 export const I_USER_USECASE = 'I_USER_USECASE';
 

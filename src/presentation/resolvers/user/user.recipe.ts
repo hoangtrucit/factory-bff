@@ -1,5 +1,5 @@
+import { UserModel } from '@clv-factory/protobuf/dist/gRPC/generate/index.app.payment.base.user.v1';
 import { Field, InputType, ObjectType } from '@nestjs/graphql';
-import { UserModel } from '@factory/protobuf/gRPC/generate/index.app.payment.base.user.v1';
 import { IsNotEmpty, IsString } from 'class-validator';
 
 @ObjectType()
